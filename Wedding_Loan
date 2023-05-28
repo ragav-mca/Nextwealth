@@ -1,0 +1,41 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Wedding_Loan {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the total no of persons");
+		int total_person = scan.nextInt();
+		int lunch_person = 200;
+		int breakfast_person = lunch_person / 2;
+		int hall_person = 200;
+		int decoration = hall_person / 2;
+		int parking = hall_person * 10 / 100;
+		int bride_savings = 50000;
+		int total_cost = (total_person * lunch_person) + (total_person * breakfast_person) + (total_person * hall_person) + decoration + parking;
+		System.out.println("The Wedding expenses is "+total_cost);
+		double bride_expense = total_cost / 2;
+		double groom_expense = total_cost / 2;
+		double bride_loan = 0.0d;
+		if(bride_expense > bride_savings)
+		{
+			bride_loan = bride_expense - bride_savings;
+			System.out.println("You have to take loan for "+bride_loan);
+		}
+		else
+		{
+			System.out.println("No need of taking loan");
+		}
+
+	}
+
+}
+
+Output:
+Enter the total no of persons
+300
+The Wedding expenses is 150120
+You have to take loan for 25060.0
+
