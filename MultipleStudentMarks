@@ -1,0 +1,41 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class MultipleStudentMarks {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		for(int i=1; i<=3; i++)
+		{
+			System.out.print("Enter student name: ");
+			String name = scan.next();
+			
+			System.out.print("Enter marks for mark1: ");
+			int mark1 = scan.nextInt();
+			
+			System.out.print("Enter marks for mark2: ");
+			int mark2 = scan.nextInt();
+			
+			scan.nextLine();
+			
+			System.out.println(name+" 's marks: "+mark1+", "+mark2);
+		}
+
+	}
+
+}
+
+Output:
+Enter student name: Ragav
+Enter marks for mark1: 98
+Enter marks for mark2: 99
+Ragav 's marks: 98, 99
+Enter student name: Ram
+Enter marks for mark1: 96
+Enter marks for mark2: 94
+Ram 's marks: 96, 94
+Enter student name: Kumar
+Enter marks for mark1: 89
+Enter marks for mark2: 95
+Kumar 's marks: 89, 95
