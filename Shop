@@ -1,0 +1,68 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Shop {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String vadai = "vadai";
+		String soda = "soda";
+		String sandwich = "sandwich";
+		
+		int vadai_price = 30;
+		int soda_price = 20;
+		int sandwich_price = 100;
+		
+		float change_amount = 0;
+		float remaining_amount = 0;
+		
+		System.out.println("Enter the items you bought");
+		String user_purchase = scan.next();
+		System.out.println(user_purchase);
+		int total_cost = 0;
+		
+		if(user_purchase.equals(vadai))
+		{
+			total_cost = 30;
+		}
+		else if(user_purchase.equals(soda))
+		{
+			total_cost = 20;
+		}
+		else if(user_purchase.equals(sandwich))
+		{
+			total_cost = 100;
+		}
+		else
+		{
+			System.out.println("Item is Invalid");
+		}
+		
+		System.out.println("Pay the total amount: "+total_cost);
+		float amount = scan.nextFloat();
+		
+		if(amount == total_cost)
+		{
+			System.out.println("Thank you");
+		}
+		else if(amount > total_cost)
+		{
+			change_amount = amount - total_cost;
+			System.out.println("Take your change_amount "+change_amount);
+		}
+		else
+		{
+			remaining_amount = total_cost - amount;
+			System.out.println("Pay your balance amount "+ remaining_amount);
+		}
+
+	}
+
+}
+
+Output:
+Enter the items you bought
+soda
+soda
+Pay the total amount: 20
