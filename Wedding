@@ -1,0 +1,32 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Wedding {
+	//Calculate wedding expenses. Cost for lunch per person is Rs200. Cost for Breakfast per
+	//person is half of lunch cost. Cost of the hall is Rs 200 per person.
+	//Decoration is 50% of Hall cost. Parking is 10% of the Hall cost. 
+	//Decide what should be the input and calculate the cost.
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the total no of persons");
+		int total_person = scan.nextInt();
+		int lunch_person = 200;
+		int breakfast_person = lunch_person / 2;
+		int hall_person = 200;
+		int decoration = hall_person / 2;
+		int parking = hall_person * 10 / 100;
+		int total_cost = (total_person * lunch_person) + (total_person * breakfast_person) + (total_person * hall_person) + decoration + parking;
+		System.out.println("The Wedding expenses is "+total_cost);
+		
+		
+
+	}
+
+}
+
+Output:
+Enter the total no of persons
+300
+The Wedding expenses is 150120
