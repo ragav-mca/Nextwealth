@@ -1,0 +1,23 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Average2 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int totalStudents = 5;
+		int totalMarks = 0;
+		int studentCount = 1;
+
+		System.out.println("Enter the marks for " + totalStudents + " students:");
+		while (studentCount != 6) {
+			System.out.print("Enter marks for student " + studentCount + ": ");
+			int marks = scan.nextInt();
+			totalMarks += marks;
+			studentCount++;
+		}
+		System.out.println("Total marks is: " + totalMarks);
+		System.out.println("The Avg is: " + totalMarks / 5);
+	}
+}
