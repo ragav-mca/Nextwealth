@@ -1,0 +1,35 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Average {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int totalStudents = 5;
+		int totalMarks = 0;
+
+		System.out.println("Enter the marks for " + totalStudents + " students:");
+
+		// Using a for loop to get marks from each student
+		for (int studentCount = 1; studentCount <= totalStudents; studentCount++) {
+			System.out.print("Enter marks for student " + studentCount + ": ");
+			int marks = scan.nextInt();
+			totalMarks += marks;
+		}
+		System.out.println("Total marks is: " + totalMarks);
+		System.out.println("Avg is " + totalMarks / 5);
+
+	}
+
+}
+
+Output:
+Enter the marks for 5 students:
+Enter marks for student 1: 90
+Enter marks for student 2: 91
+Enter marks for student 3: 92
+Enter marks for student 4: 93
+Enter marks for student 5: 94
+Total marks is: 460
+Avg is 92
