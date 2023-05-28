@@ -1,0 +1,43 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Bakery {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int choc_cost = 200;
+		int cake_cost = 150;
+		System.out.println("Enter the budget");
+		int budget = scan.nextInt();
+		
+		int choc_count = 0;
+		int remaining_budget = budget;
+		while(remaining_budget >=  choc_cost)
+		{
+			choc_count ++;
+			remaining_budget -= choc_cost;
+		}
+		
+		int cake_count = 0;
+		remaining_budget = budget;
+		while(remaining_budget >= cake_cost)
+		{
+			cake_count ++;
+			remaining_budget -= cake_cost;
+		}
+		
+		System.out.println("The total budget is: "+ budget);
+		System.out.println("The user can buy "+choc_count+" chocolates");
+		System.out.println("The user can buy "+cake_count+" cakes");
+		
+	}
+
+}
+
+Output:
+Enter the budget
+500
+The total budget is: 500
+The user can buy 2 chocolates
+The user can buy 3 cakes
