@@ -1,0 +1,30 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Mileage {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the petrol quantity you have");
+		float petrol_quantity = scan.nextInt();
+		System.out.println("Enter the distance you want to travel");
+		float distance = scan.nextInt();
+		float mileage = distance / petrol_quantity;
+		System.out.println("Mileage: " + mileage + " km/l");
+		if(mileage > 30)
+		{
+			System.out.println(" You have to fill the tank again");
+		}
+		
+
+	}
+
+}
+
+Output:
+Enter the petrol quantity you have
+5
+Enter the distance you want to travel
+10
+Mileage: 2.0 km/l
