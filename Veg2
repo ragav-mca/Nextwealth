@@ -1,0 +1,45 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Veg2 {
+	//Same as above, but the price of Onion is different based on the city. Chennai - Rs30, Trichy Rs27, Madurai Rs 34. Input is budget and city
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the location");
+		String customer_location = scan.next();
+		int chennai_onionprice = 30;
+		int trichy_onionprice = 27;
+		int madurai_onionprice = 34;
+		double tomato_price = 10.5;
+		double onion_purchase = 0.0d;
+		double budget = chennai_onionprice + trichy_onionprice + madurai_onionprice + tomato_price;
+		if(customer_location.equals("chennai"))
+		{
+			onion_purchase = budget / chennai_onionprice;
+		}
+		else if(customer_location.equals("trichy"))
+		{
+			onion_purchase = budget / trichy_onionprice;
+		}
+		else if(customer_location.equals("madurai"))
+		{
+			onion_purchase = budget / madurai_onionprice;
+		}
+		else
+		{
+			System.out.println("Invalid Input");
+		}
+		System.out.println("We can buy "+onion_purchase+" Kg of onion");
+		double tomato_purchase = budget / tomato_price;
+		System.out.println("We can buy "+tomato_purchase+" Kg of tomato");
+
+	}
+
+}
+
+Output:
+Invalid Input
+We can buy 0.0 Kg of onion
+We can buy 9.666666666666666 Kg of tomato
