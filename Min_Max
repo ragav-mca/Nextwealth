@@ -1,0 +1,62 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Min_Max {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int a, b, c, min, max;
+		System.out.println("Enter the first number");
+		a = scan.nextInt();
+		System.out.println("Enter the second number");
+		b = scan.nextInt();
+		System.out.println("Enter the third number");
+		c = scan.nextInt();
+		System.out.println("Enter min or max to find");
+		String user_choice = scan.next();
+		//System.out.println(user_choice);
+		if(user_choice.equals("min"))
+		{
+			if(a<b && a<c)
+			{
+				System.out.println("The minimum of three number is: "+a);
+			}
+			else if(b<a && b<c)
+			{
+				System.out.println("The minimum of three number is: "+b);
+			}
+			else
+			{
+				System.out.println("The minimum of three number is: "+c);
+			}
+		}
+		else if(user_choice.equals("max"))
+		{
+			if(a>b && a>c)
+			{
+				System.out.println("The maximum of three number is: "+a);
+			}
+			else if(b>a && b>c)
+			{
+				System.out.println("The maximum of three number is: "+b);
+			}
+			else
+			{
+				System.out.println("The maximum of three number is: "+c);
+			}
+		}
+	}
+
+}
+
+Output:
+Enter the first number
+43
+Enter the second number
+23
+Enter the third number
+35
+Enter min or max to find
+max
+The maximum of three number is: 43
