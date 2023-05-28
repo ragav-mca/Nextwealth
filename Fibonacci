@@ -1,0 +1,40 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class Fibbonacci {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int first_num = 0;
+		int second_num = 1;
+		int third_num = 2;
+		int added_num = 0;
+		System.out.println("Enter how many numbers to be printed");
+		int limit = scan.nextInt();
+		System.out.println(first_num);
+		System.out.println(second_num);
+		System.out.println(third_num);
+		for(int i=3; i<limit; i++)
+		{
+			added_num = first_num + second_num + third_num;
+			System.out.println(added_num );
+			first_num = second_num;
+			second_num = third_num;
+			third_num = added_num;
+		}
+		
+
+	}
+
+}
+
+Output:
+Enter how many numbers to be printed
+6
+0
+1
+2
+3
+6
+11
