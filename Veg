@@ -1,0 +1,22 @@
+package sayur_practice;
+
+public class Veg1 {
+	//Program to find out how many Kg of onion or tomato we can buy. One Kg of Onion is 20rs, Tomato is 10.5rs.  Input is the budget. 
+
+	public static void main(String[] args) {
+		int onion_price = 20;
+		double tomato_price = 10.5;
+		double budget = onion_price + tomato_price;
+		double onion_purchase = budget / onion_price;
+		System.out.println("We can buy "+onion_purchase+" of onion");
+		double tomato_purchase = budget / tomato_price;
+		System.out.println("We can buy "+tomato_purchase+" of tomato");
+		
+
+	}
+
+}
+
+Output:
+We can buy 1.525 of onion
+We can buy 2.9047619047619047 of tomato
