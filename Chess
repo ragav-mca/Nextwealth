@@ -1,0 +1,42 @@
+package sayur_practice;
+
+import java.util.Scanner;
+
+public class ChessBoard {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of the chess board");
+		int size = scan.nextInt();
+		for(int row=0; row<size; row++)
+		{
+			for(int column=0; column<size; column++)
+			{
+				if((row+column) %2 == 0)
+				{
+					System.out.print("\\u25A0 "); //White Square
+				}
+				else
+				{
+					System.out.print("b"); //Black Square
+				}
+			}
+			System.out.println();
+		}
+	
+
+	}
+
+}
+
+Output:
+Enter the size of the chess board
+8
+\u25A0 b\u25A0 b\u25A0 b\u25A0 b
+b\u25A0 b\u25A0 b\u25A0 b\u25A0 
+\u25A0 b\u25A0 b\u25A0 b\u25A0 b
+b\u25A0 b\u25A0 b\u25A0 b\u25A0 
+\u25A0 b\u25A0 b\u25A0 b\u25A0 b
+b\u25A0 b\u25A0 b\u25A0 b\u25A0 
+\u25A0 b\u25A0 b\u25A0 b\u25A0 b
+b\u25A0 b\u25A0 b\u25A0 b\u25A0 
