@@ -1,0 +1,22 @@
+package sayur_practice;
+
+public class Swap {
+
+	public static void main(String[] args) {
+		int mysalary = 20000;
+		int superior_salary = 50000;
+		System.out.println("Before swapping: "+"Mine: "+mysalary + " Superior: "+superior_salary);
+		
+		int temp = mysalary;
+		mysalary = superior_salary;
+		superior_salary = temp;
+		System.out.println("After swapping: "+"Mine: "+mysalary + " Superior: "+superior_salary);
+
+
+	}
+
+}
+
+Output:
+Before swapping: Mine: 20000 Superior: 50000
+After swapping: Mine: 50000 Superior: 20000
