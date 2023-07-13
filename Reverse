@@ -1,0 +1,42 @@
+package practice_june;
+
+public class Reverse {
+	int reverseDigit(int num)
+	{
+		int digit = 0;
+		int rev = 0;
+		
+		while(num !=0)
+		{
+			digit = num % 10;
+			rev = rev*10 + digit;
+			num = num / 10;
+		}
+		return rev;
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class ReverseApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number to reverse");
+		int num = scan.nextInt();
+		Reverse rev = new Reverse();
+		int res = rev.reverseDigit(num);
+		System.out.println("The reversed number of "+num+" is "+res);
+		
+
+	}
+
+}
+
+Output:
+Enter the number to reverse
+1234
+The reversed number of 1234 is 4321
