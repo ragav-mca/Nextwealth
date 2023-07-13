@@ -1,0 +1,30 @@
+package practice_june;
+
+import java.util.Scanner;
+
+public class Greatest {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter two numbers");
+		int num1 = scan.nextInt();
+		int num2 = scan.nextInt();
+		
+		if(num1 > num2)
+		{
+			System.out.println("Number1 "+num1+" is greater");
+		}
+		else
+		{
+			System.out.println("Number2 "+num2+" is greater");
+		}
+
+	}
+
+}
+
+Output:
+Enter two numbers
+5
+8
+Number2 8 is greater
