@@ -1,0 +1,70 @@
+package practice_june;
+
+public class Armstrong {
+	static int findCount(int num)
+	{
+		int count = 0;
+		while(num != 0)
+		{
+			int digit = num % 10;
+			count++;
+			num = num/10;
+		}
+		return count;
+	}
+	
+	static int findSum(int num, int power)
+	{
+		int sum = 0;
+		if(num == 0)
+		{
+			return 0;
+		}
+		
+		while(num != 0)
+		{
+			int digit = num%10;
+			int result = (int) Math.pow(digit, power);
+			sum = sum + result;
+			num = num/10;
+		}
+		return sum;
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class ArmstrongApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num = scan.nextInt();
+		int power = Armstrong.findCount(num);
+		int res = Armstrong.findSum(num, power);
+		
+		if(num == res)
+		{
+			System.out.println("Entered number "+num+" is Armstrong");
+		}
+		else
+		{
+			System.out.println("Entered number "+num+" is not Armstrong");
+		}
+		
+
+	}
+
+}
+
+Output:
+Enter the number
+10
+Entered number 10 is not Armstrong
+
+Enter the number
+5
+Entered number 5 is Armstrong
