@@ -1,0 +1,73 @@
+package practice_june;
+
+public class Strong {
+	int fact(int n)
+	{
+		int fact = 1;
+		for(int i=1; i<=n; i++)
+		{
+			fact = fact*i;
+		}
+		return fact;
+	}
+	
+	boolean detectStrong(int num)
+	{
+		int temp = num;
+		int sum = 0;
+		int digit = 0;
+		
+		while(temp != 0)
+		{
+			digit = temp%10;
+			sum = sum+fact(digit);
+			temp = temp/10;
+		}
+		if(sum==num)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class StrongApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = scan.nextInt();
+		Strong strong = new Strong();
+		boolean res = strong.detectStrong(n);
+		
+		if(res==true)
+		{
+			System.out.println("Entered number "+n+" Strong");
+		}
+		else
+		{
+			System.out.println("Entered number "+n+" is not Strong");
+		}
+		
+
+	}
+
+}
+
+Output:
+Enter the number
+145
+Entered number 145 Strong
+
+Enter the number
+765
+Entered number 765 is not Strong
