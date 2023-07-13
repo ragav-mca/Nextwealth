@@ -1,0 +1,53 @@
+package practice_june;
+
+public class Fibonacci {
+	void fibonacci(int n)
+	{
+		int num1 = 0;
+		int num2 = 1;
+		if(n==0)
+		{
+			System.out.println(num1);
+		}
+		else if(n==1)
+		{
+			System.out.println(num1+" "+num2+" ");
+		}
+		else
+		{
+			System.out.println(num1+" "+num2+" ");
+			for(int i=3; i<=n; i++)
+			{
+				int fib = num1 + num2;
+				System.out.print(fib+" ");
+				num1 = num2;
+				num2 = fib;
+			}
+		}
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class FibonacciApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number to print fibonacci series elements");
+		int n = scan.nextInt();
+		Fibonacci f = new Fibonacci();
+		f.fibonacci(n);
+		
+
+	}
+
+}
+
+Output:
+Enter the number to print fibonacci series elements
+10
+0 1 
+1 2 3 5 8 13 21 34 
