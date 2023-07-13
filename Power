@@ -1,0 +1,44 @@
+package practice_june;
+
+public class Mathematics {
+	static int power(int base, int exp)
+	{
+		int power = 1;
+		
+		for(int i=1; i<=exp; i++)
+		{
+			power = power * base;
+		}
+		return power;
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class PowerApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the base and exponent");
+		int base = scan.nextInt();
+		int exp = scan.nextInt();
+		int res = (int) Math.pow(base, exp);
+		System.out.println("Result of "+base+" raised to power "+exp+" using in-built method is "+res);
+		
+		res = Mathematics.power(base, exp);
+		System.out.println("Result of "+base+" raised to power "+exp+" using user-defined method is "+res);
+		
+
+	}
+
+}
+
+Output:
+Enter the base and exponent
+2
+6
+Result of 2 raised to power 6 using in-built method is 64
+Result of 2 raised to power 6 using user-defined method is 64
