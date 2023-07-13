@@ -1,0 +1,41 @@
+package practice_june;
+
+public class FirstNNaturalNum {
+	int SumNaturalNum(int n)
+	{
+		int sum = 0;
+		
+		for(int i=1; i<=n; i++)
+		{
+			sum = sum + i;
+		}
+		return sum;
+	}
+	
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class SumNNaturalNumApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the value of n to find 1st n natural numbers");
+		int n = scan.nextInt();
+		FirstNNaturalNum z = new FirstNNaturalNum();
+		int sum = z.SumNaturalNum(n);
+		System.out.println("Sum of 1st n Natural Numbers is "+sum);
+		
+
+	}
+
+}
+
+Output:
+Enter two numbers to find the sum between the two numbers
+5
+15
+The sum of numbers in between 5 and 15 is 110
