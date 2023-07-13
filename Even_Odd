@@ -1,0 +1,32 @@
+package practice_june;
+
+import java.util.Scanner;
+
+public class Even_Odd {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number to check whether it is even or odd");
+		int n = scan.nextInt();
+		
+		if(n%2 == 0)
+		{
+			System.out.println("Entered number "+n+" is even");
+		}
+		else
+		{
+			System.out.println("Entered number "+n+" is odd");
+		}
+
+	}
+
+}
+
+Output:
+Enter the number to check whether it is even or odd
+4
+Entered number 4 is even
+
+Enter the number to check whether it is even or odd
+7
+Entered number 7 is odd
