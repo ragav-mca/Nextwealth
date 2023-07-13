@@ -1,0 +1,79 @@
+package practice_june;
+
+public class ArmstrongRange {
+	static int findCount(int num)
+	{
+		int count = 0;
+		while(num != 0)
+		{
+			int digit = num%10;
+			count++;
+			num = num/10;
+		}
+		return count;
+	}
+	
+	static int findSum(int num, int power)
+	{
+		int sum = 0;
+		if(num == 0)
+		{
+			return 0;
+		}
+		
+		while(num != 0)
+		{
+			int digit = num%10;
+			int result = (int) Math.pow(num, power);
+			sum = sum + result;
+			num = num/10;
+		}
+		return sum;
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class ArmstrongRangeApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the range to find armstrong numbers between the given range");
+		int a = scan.nextInt();
+		int b = scan.nextInt();
+		int count = 0;
+		
+		for(int i=a; i<=b; i++)
+		{
+			int power = ArmstrongRange.findCount(i);
+			int res = ArmstrongRange.findSum(i, power);
+			if(i == res)
+			{
+				System.out.println(i +" is Armstrong Number");
+				count++;
+			}
+		}
+		System.out.println("There are "+count+" Armstrong Numbers in the range "+a+" and "+b);
+
+	}
+
+}
+
+Output:
+Enter the range to find armstrong numbers between the given range
+1
+50
+1 is Armstrong Number
+2 is Armstrong Number
+3 is Armstrong Number
+4 is Armstrong Number
+5 is Armstrong Number
+6 is Armstrong Number
+7 is Armstrong Number
+8 is Armstrong Number
+9 is Armstrong Number
+There are 9 Armstrong Numbers in the range 1 and 50
+
