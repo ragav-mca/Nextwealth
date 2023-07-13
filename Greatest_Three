@@ -1,0 +1,36 @@
+package practice_june;
+
+import java.util.Scanner;
+
+public class Greatest_Three {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter three numbers");
+		int a = scan.nextInt();
+		int b = scan.nextInt();
+		int c = scan.nextInt();
+		
+		if(a>b && a>c)
+		{
+			System.out.println("Value : "+ a+" is greater");
+		}
+		else if(b>a && b>c)
+		{
+			System.out.println("Value : "+ b+" is greater");
+		}
+		else
+		{
+			System.out.println("Value : "+ c+" is greater");
+		}
+
+	}
+
+}
+
+Output:
+Enter three numbers
+3
+6
+9
+Value : 9 is greater
