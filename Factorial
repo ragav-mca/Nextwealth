@@ -1,0 +1,36 @@
+package practice_june;
+
+public class Factorial {
+	static int factorial(int n)
+	{
+		int fact = 1;
+		for(int i=1; i<=n; i++)
+		{
+			fact = fact*i;
+		}
+		return fact;
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class FactorialApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number to find the factorial of it");
+		int n = scan.nextInt();
+		int res = Factorial.factorial(n);
+		System.out.println("Factorial of Entered number "+n+" is "+res);
+
+	}
+
+}
+
+Output:
+Enter the number to find the factorial of it
+5
+Factorial of Entered number 5 is 120
