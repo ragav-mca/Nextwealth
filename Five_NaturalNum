@@ -1,0 +1,18 @@
+package practice_june;
+
+public class Five_NaturalNum {
+
+	public static void main(String[] args) {
+		int sum = 0;
+		for(int i=1; i<=5; i++)
+		{
+			sum = sum + i;
+		}
+		System.out.println("Sum of 1st five natural numbers is "+ sum);
+
+	}
+
+}
+
+Output:
+Sum of 1st five natural numbers is 15
