@@ -1,0 +1,50 @@
+package practice_june;
+
+public class Factor {
+	static boolean factor(int num)
+	{
+		if(10%num == 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class FactorApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number to find whether it is a factor of 10");
+		int num = scan.nextInt();
+		boolean res = Factor.factor(num);
+		
+		if(res == true)
+		{
+			System.out.println("Entered number "+num+" is the factor of 10");
+		}
+		else
+		{
+			System.out.println("Entered number "+num+" is not the factor of 10");
+		}
+
+	}
+
+}
+
+Output:
+Enter the number to find whether it is a factor of 10
+5
+Entered number 5 is the factor of 10
+Enter the number to find whether it is a factor of 10
+7
+Entered number 7 is not the factor of 10
+
