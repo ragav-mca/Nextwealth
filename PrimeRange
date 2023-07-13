@@ -1,0 +1,64 @@
+package practice_june;
+
+public class PrimeRange {
+	boolean isPrime(int n)
+	{
+		if(n==0 || n==1)
+		{
+			return false;
+		}
+		else if(n==2)
+		{
+			return true;
+		}
+		else
+		{
+			for(int i=2; i<n; i++)
+			{
+				if(n%i == 0)
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class PrimeRangeApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter two numbers to check whether the numbers is prime or not between the range");
+		int a = scan.nextInt();
+		int b = scan.nextInt();
+		int count = 0;
+		PrimeRange p = new PrimeRange();
+		for(int i=a; i<=b; i++)
+		{
+			boolean res = p.isPrime(i);
+			if(res == true)
+			{
+				System.out.println(i);
+				count++;
+			}
+		}
+		
+		System.out.println("There are "+count+" prime numbers in the given range");
+		
+		
+		
+
+	}
+
+}
+
+Output:
+Enter the number of n to find it is prime or not
+3
+Entered number 3 is prime
