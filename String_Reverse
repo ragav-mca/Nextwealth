@@ -1,0 +1,21 @@
+package practice_june;
+
+public class String_Reverse {
+
+	public static void main(String[] args) {
+		String str = "123";
+		String reverse = "";
+		char[] characterarray = str.toCharArray();
+
+		for(int i=characterarray.length-1; i>=0; i--)
+		{
+			reverse = reverse + characterarray[i];
+		}
+		System.out.println(reverse);
+
+	}
+
+}
+
+Output:
+321
