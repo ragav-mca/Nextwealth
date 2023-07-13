@@ -1,0 +1,39 @@
+package practice_june;
+
+public class FindSum {
+	int sum(int a, int b)
+	{
+		int sum = 0;
+		for(int i=a; i<=b; i++)
+		{
+			sum = sum + i;
+		}
+		return sum;
+	}
+
+}
+
+package practice_june;
+
+import java.util.Scanner;
+
+public class SumApp {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter two numbers to find the sum between the two numbers");
+		int a = scan.nextInt();
+		int b = scan.nextInt();
+		FindSum fs = new FindSum();
+		int sum = fs.sum(a,b);
+		System.out.println("The sum of numbers in between "+a+" and "+b+" is "+sum);
+		
+	}
+
+}
+
+Output:
+Enter two numbers to find the sum between the two numbers
+5
+15
+The sum of numbers in between 5 and 15 is 110
